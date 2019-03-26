@@ -38,7 +38,7 @@ end
 function TestConditionIsPlayerTrainSpeeding()
     speed = GetSpeedInMPH();
 
-    if (speed = FAILURE_SPEED) then 
+    if (speed == FAILURE_SPEED) then 
         SysCall ("ScenarioManager:TriggerScenarioFailure", FAILURE_MESSAGE);
         return CONDITION_SUCCEEDED;
     end
